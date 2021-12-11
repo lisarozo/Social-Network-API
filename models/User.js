@@ -12,6 +12,10 @@ const UserSchema = new Schema(
             unique: true,
             match: [/.+@.+\..+/, 'Please enter a valid e-mail address']
           },
+          thoughts: {
+
+          }
+        });
 
 UserSchema.virtual('username').get(function() {
     return this.email.slice(0, this.email.indexOf('@'));
